@@ -8,6 +8,7 @@ body{
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 80px;
+    margin-right: 25px;
+    padding-left: 100px;
+    background-color: rgb(243, 243, 243);
 }

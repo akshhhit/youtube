@@ -7,6 +7,7 @@
     top: 0px;
     left: 0px;
     right: 0px;
+    z-index: 1000;
     background-color: white;
     border-bottom-width: 1px;
     border-bottom-style:solid;
@@ -57,11 +58,54 @@
     border-color: rgb(192, 192, 192);
     margin-left: -1px;
     margin-right: 10px;
+    position: relative;
+}
+
+.searchbutton,
+.voicesearchbutton,
+.uploadiconcontainer,
+.youtubeappscontainer,
+.notificationiconcontainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+ 
+.searchbutton .tooltip, 
+.voicesearchbutton .tooltip,
+.uploadiconcontainer .tooltip,
+.youtubeappscontainer .tooltip,
+.notificationiconcontainer .tooltip{
+    font-family: Roboto, Arial;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -24px; 
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.searchbutton:hover .tooltip,
+.voicesearchbutton:hover .tooltip,
+.uploadiconcontainer:hover .tooltip,
+.youtubeappscontainer:hover .tooltip,
+.notificationiconcontainer:hover .tooltip
+{
+    opacity: 100;
 }
 
 .searchicon{
     height: 25px;
-    margin-top: 3px;
 }
 
 .voicesearchbutton{
@@ -99,13 +143,33 @@
     height: 24px;
 }
 
-.youtubeappsicon{
+.youtubeappsicon{ 
     height: 24px;
 }
 
 .notificationsicon{
     height: 24px;
 }
+
+.notificationiconcontainer{
+    position: relative; 
+}
+
+.notificationscount{
+    font-family: Roboto, Arial;
+    font-size: 11px;
+    position: absolute;
+    top:-2px;
+    right: -3.5px;
+    background-color: rgb(175, 1, 1);
+    color: white;
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
 
 .currentuserpicture{
     height: 35px;
